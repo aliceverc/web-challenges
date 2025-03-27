@@ -37,6 +37,17 @@
 
   💡 Select the animals by their class names and use the text-align property.
 */
+
+/* 
+  The animals want some color! 🎨
+  When the mouse hovers over an animal, change the background color.
+   - The crocodile wants to be lightblue.
+   - The giraffe likes lightgreen.
+   - The dino is a huge fan of lightsalmon.
+
+  💡 You'll need to use a pseudo-class selector for each animal.
+*/
+
 .giraffe {
   text-align: center;
 }
@@ -57,13 +68,3 @@
   cursor: pointer;
   background-color: lightblue;
 }
-
-/* 
-  The animals want some color! 🎨
-  When the mouse hovers over an animal, change the background color.
-   - The crocodile wants to be lightblue.
-   - The giraffe likes lightgreen.
-   - The dino is a huge fan of lightsalmon.
-
-  💡 You'll need to use a pseudo-class selector for each animal.
-*/
