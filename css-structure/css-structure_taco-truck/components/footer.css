@@ -1,0 +1,20 @@
+#footer {
+    background-color: var(--header-bg);
+    padding: 20px;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  footer h4 {
+    color: var(--header-text);
+    font-size: 20px;
+  }
+  
+  .social {
+    list-style-type: none;
+    line-height: 2
+  }
+  .social a {
+    text-decoration: none;
+    color: white;
+  }
