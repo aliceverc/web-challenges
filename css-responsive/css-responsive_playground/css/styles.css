@@ -62,7 +62,7 @@ h1 {
 .box--one {
   background-color: lightblue;
 
-  width: 100px;
+  width: 100%;
   height: 100px;
 }
 
@@ -93,4 +93,32 @@ h1 {
 
 .box--five img {
   width: 100%;
+}
+
+/* If the screen size is 601px or more, set the font-size of <div> to 80px */
+@media only screen and (min-width: 599px) {
+  .box--two {
+    width: 200px;
+  }
+}
+@media only screen and (min-width: 1199px) {
+  .box--two {
+    width: 400px;
+  }
+}
+@media only screen and (orientation: landscape) {
+.box--three {
+    height: 50px;
+    width: 250px;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .box--four {
+    background-color: darkslategrey;
+  }
+}
+@media only screen and (min-width: 599px) {
+  .box--five img {
+    background-image: url("./img/cat_medium.jpg");
+  }
 }
