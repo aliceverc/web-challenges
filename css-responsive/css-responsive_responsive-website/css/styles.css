@@ -240,7 +240,43 @@ CSS based on conditions such as viewport width, etc. */
 
 /* Media Query Tablet */
 /* --- */
-/* Replace this comment with your media query. */
+@media only screen and (min-width: 600px) {
+  .card-section {
+    display: grid;
+    grid-template-areas: "--forest intro-text" "--mountain --river" "--ocean --desert";
+    grid-template-columns: 5fr 5fr;
+    gap: 2px;
+    padding: 20px;
+    align-items: start;
+  }
+  .product-card {
+    width: 90%;
+  }
+  .--forest {
+    grid-area: --forest;
+    margin-bottom: 20px;
+  }
+  .intro-text {
+    grid-area: intro-text;
+    width: 90%;
+  }
+  .--mountain {
+    grid-area: --mountain;
+    margin-bottom: 20px;
+  }
+  .--river {
+    grid-area: --river;
+    margin-bottom: 20px;
+  }
+  .--ocean {
+    grid-area: --ocean;
+    margin-bottom: 20px;
+  }
+  .--desert {
+    grid-area: --desert;
+    margin-bottom: 20px;
+  }
+}
 /* --- */
 
 /* Media Query Desktop */
