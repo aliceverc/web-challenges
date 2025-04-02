@@ -10,7 +10,11 @@ console.clear();
 */
 
 // --v-- write your code here --v--
-
+const postTitle = "Social Media Post";
+const postText =
+  "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.";
+const userName = "Alice";
+const isReported = true;
 // --^-- write your code here --^--
 
 /*
@@ -18,5 +22,10 @@ console.clear();
 */
 
 // --v-- write your code here --v--
-
+console.log(postTitle, postText, userName, isReported);
+// Strukturierte Ausgabe
+console.log("Post Title:", postTitle);
+console.log("Post Text:", postText);
+console.log("Username:", userName);
+console.log("Is Reported:", isReported);
 // --^-- write your code here --^--
