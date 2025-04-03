@@ -11,6 +11,7 @@ In this exercise you train to write a `switch` statement. Please also refer to t
 - Write a `switch` statement that checks the result of [`typeof`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof) data and logs a different string depending on the type or value of `data`.
 
 The possible strings to log are:
+
 - "undefined!"
 - "null!"
 - "number!"
@@ -23,7 +24,6 @@ The possible strings to log are:
 - "I have no idea!" (for any other type)
 
 > 💡 Hint: For checking if `data` is `null`, an `array`, or a regular `object`, you’ll need to handle these cases specifically in JavaScript, as `typeof` returns "object" for all of them.
-
 
 ### Running the Code
 
