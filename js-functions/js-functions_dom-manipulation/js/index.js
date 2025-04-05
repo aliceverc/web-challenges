@@ -1,4 +1,3 @@
-const box = document.querySelector("[data-js=box]");
 const redButton = document.querySelector("[data-js=js-red-button]");
 const greenButton = document.querySelector("[data-js=js-green-button]");
 const blueButton = document.querySelector("[data-js=js-blue-button]");
@@ -12,35 +11,33 @@ We want to add functionality to the buttons on this page. When a button is click
 */
 
 redButton.addEventListener("click", () => {
-  /*
-  Use your functions to:
-    - remove all classes
-    - then add the class name: "red"
-  */
+  removeAllColors();
+  addColor("red");
 });
 
 blueButton.addEventListener("click", () => {
-  /*
-  Use your functions to:
-    - remove all classes
-    - then add the class name: "blue"
-  */
+  removeAllColors();
+  addColor("blue");
 });
 
 greenButton.addEventListener("click", () => {
-  /*
-  Use your functions to:
-    - remove all classes
-    - then add the class name: "green"
-  */
+  removeAllColors();
+  addColor("green");
 });
 
 grayButton.addEventListener("click", () => {
-  /*
-  Use your functions to:
-    - remove all classes
-    - then add the class name: "gray"
-  */
+  removeAllColors();
+  addColor("gray");
 });
 
 // Write your two functions below:
+
+function removeAllColors() {
+  const box = document.querySelector("[data-js=box]");
+  box.classList.remove("red", "green", "blue", "gray");
+}
+
+function addColor(color) {
+  const box = document.querySelector("[data-js=box]");
+  box.classList.add(color);
+}
