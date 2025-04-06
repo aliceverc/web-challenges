@@ -20,15 +20,29 @@ Update the content and style of the page based on the current day and time.
 
 */
 
+const currentHour = new Date().getHours();
+
 const display = document.querySelector('[data-js="display"]');
 
-function getGreeting() {
-  // Code here
+function getGreeting(getHours) {
+  if (getHours >= 6 && getHours <= 12) {
+    return "Good Morning";
+  }
+  if (getHours >= 13 && getHours <= 18) {
+    return "Good Afternoon";
+  }
+  if (getHours >= 19 && getHours <= 22) {
+    return "Good Evening";
+  }
+  if (getHours >= 23 || getHours <= 5) {
+    return "Good Night";
+  }
 }
 
 function getDayColor() {
   // Code here
 }
 
-display.textContent = getGreeting();
+display.textContent = getGreeting(currentHour);
+
 document.body.style.backgroundColor = getDayColor();
