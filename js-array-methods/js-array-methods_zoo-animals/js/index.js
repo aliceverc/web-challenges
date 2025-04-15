@@ -1,12 +1,19 @@
 import { zooAnimals } from "../utils/db.js";
-
+console.log("JS loaded test");
 // This website uses a function to check wether a specific animal is part of the zoo or not but it's not working correct.
 // Please implement the function 'hasAnimal' that gets an array of animals and an animal name
 // The function should return 'true' if the animal name is included in the array or 'false' if not.
 
 /*function hasAnimal(animals, animalName) {
   return animals.includes(animalName);
+}
+
+function hasAnimal(animals, animalName) {
+  return animals.includes(animalName);
 }*/
+
+
+console.log(hasAnimal(zooAnimals, "Sheep"));
 
 // Bonus:
 // Can you modify the function so that it works case-insensitive?

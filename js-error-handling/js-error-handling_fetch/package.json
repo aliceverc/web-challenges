@@ -1,7 +1,7 @@
 {
-  "name": "js-array-methods_zoo-animals",
+  "name": "js-error-handling_fetch",
   "version": "0.0.0-unreleased",
-  "description": "JS Array Methods: Zoo Animals",
+  "description": "HTML, CSS and JS with jest support",
   "main": "index.html",
   "type": "module",
   "scripts": {
@@ -12,14 +12,10 @@
   "devDependencies": {
     "@babel/core": "^7.22.5",
     "@types/jest": "^29.5.2",
-    "eslint": "^8.43.0",
-    "eslint-plugin-jest": "^27.2.2"
+    "eslint-plugin-jest": "^27.2.2",
+    "eslint": "^8.43.0"
   },
   "nf": {
     "template": "html-css-js"
-  },
-  "private": true,
-  "dependencies": {
-    "serve-index": "^1.9.1"
   }
 }
