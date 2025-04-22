@@ -1,6 +1,7 @@
+// vite.config.js
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import eslint from "vite-plugin-eslint";
+import eslint from "@nabla/vite-plugin-eslint";  // ← swapped here
 import svgr from "vite-plugin-svgr";
 
 export default defineConfig(() => {
