@@ -12,7 +12,8 @@ export default function List({ tags, onDeleteTag }) {
               className="tag-list__item-button"
               type="button"
               aria-label="delete list item"
-              onClick={() => onDeleteTag?.(tag)}
+              /* delete button calls onDeleteTag with this tag's value */
+              onClick={() => onDeleteTag(tag)}
             >
               ✕
             </button>

@@ -1,5 +1,6 @@
 import "./Form.css";
 
+// call onAddTag prop with the enetered tag string
 export default function Form({ onAddTag }) {
   function handleSubmit(event) {
     event.preventDefault();
