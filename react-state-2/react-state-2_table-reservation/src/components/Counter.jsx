@@ -1,8 +1,5 @@
-import { useState } from "react";
-
-export default function Counter() {
-  const [people, setPeople] = useState(0);
-
+// add 'onAdd' and 'onSubstract' to the Counter's list of prop
+export default function Counter({ onAdd, onSubstract }) {
   return (
     <>
       <h2>How many people would you like to visit us with?</h2>
@@ -10,18 +7,20 @@ export default function Counter() {
         <button
           type="button"
           className="counter__button"
-          aria-label="increment people count"
-          onClick={() => setPeople(people + 1)}
+          aria-label="decrement people count"
+          /* assign the new props to the button's 'onClick' prop: the button will subtract new people */
+          onClick={onSubstract}
         >
-          +
+          -
         </button>
         <button
           type="button"
           className="counter__button"
-          aria-label="decrement people count"
-          onClick={() => setPeople(people - 1)}
+          aria-label="increment people count"
+          /* assign the new props to the button's 'onClick' prop: the button will add new people */
+          onClick={onAdd}
         >
-          -
+          +
         </button>
       </div>
     </>
