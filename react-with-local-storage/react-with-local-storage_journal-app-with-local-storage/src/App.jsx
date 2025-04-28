@@ -5,6 +5,7 @@ import EntryForm from "./components/EntryForm";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import { uid } from "uid";
+import useLocalStorageState from "use-local-storage-state";
 
 const initialEntries = [
   {
@@ -37,7 +38,11 @@ const initialEntries = [
 ];
 
 function App() {
-  const [entries, setEntries] = useState(initialEntries);
+  // key: "entries" > where to read/write in localStorage
+  const [entries, setEntries] = useLocalStorageState("entries", {
+    defaultValue: initialEntries,
+  }); // default value: initialEntries > what to show the first time
+
   const [filter, setFilter] = useState("all"); // "all" or "favorites"
 
   function handleAddEntry(newEntry) {
@@ -62,6 +67,8 @@ function App() {
   function handleShowAllEntries() {
     setFilter("all");
   }
+
+  console.log(entries);
 
   const favoriteEntries = entries.filter((entry) => entry.isFavorite);
 
