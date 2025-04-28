@@ -1,4 +1,4 @@
-# React Effects and Fetch: Pokémon API
+npm# React Effects and Fetch: Pokémon API
 
 This app is designed to load and display a list of Pokémon.
 
