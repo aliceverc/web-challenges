@@ -13,9 +13,9 @@ async function fetcher(url) {
   // if the response has an HTTP error status, create an Error object with details
   if (!response.ok) {
     const error = new Error("An error occurred while fetching the data.");
-    error.info = await response.json();  // attach any additional error info
-    error.status = response.status;     // attach the HTTP status code
-    throw error;                        // throw to let SWR know about the error
+    error.info = await response.json(); // attach any additional error info
+    error.status = response.status; // attach the HTTP status code
+    throw error; // throw to let SWR know about the error
   }
 
   // if everything is fine, parse and return the JSON payload
@@ -28,11 +28,16 @@ export default function ISSTracker() {
   // - error: any error thrown by the fetcher
   // - isLoading: true while the initial fetch is in progress
   // - mutate: a function to manually re-fetch the data
-  const { data: coords, error, isLoading, mutate } = useSWR(
-    URL,            // the key: our API endpoint
-    fetcher,        // the function that actually fetches the data
+  const {
+    data: coords,
+    error,
+    isLoading,
+    mutate,
+  } = useSWR(
+    URL, // the key: our API endpoint
+    fetcher, // the function that actually fetches the data
     {
-      refreshInterval: 5000  // automatically re-fetch every 5000ms (5 seconds)
+      refreshInterval: 5000, // automatically re-fetch every 5000ms (5 seconds)
     }
   );
 
