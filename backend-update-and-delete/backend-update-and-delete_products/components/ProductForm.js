@@ -1,36 +1,15 @@
 import styled from "styled-components";
-import useSWR from "swr";
 import StyledButton from "@/components/Button";
 
-export default function ProductForm() {
-  const { mutate } = useSWR("/api/products");
-
-  async function handleSubmit(event) {
-    event.preventDefault();
-
-    const formData = new FormData(event.target);
-    const productData = Object.fromEntries(formData);
-
-    const response = await fetch("/api/products", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(productData),
-    });
-
-    if (!response.ok) {
-      console.error(response.status);
-      return;
-    }
-
-    mutate();
-    event.target.reset();
-  }
-
+// ProductForm expects two props:
+//  - onSubmit: a callback for form submission
+//  - tile: the heading text to display above the form
+export default function ProductForm({ onSubmit, title }) {
   return (
-    <StyledForm onSubmit={handleSubmit}>
-      <StyledHeading>Add a new Fish</StyledHeading>
+    // use the passed-in onSubmit handler instead of a hard-coded one
+    <StyledForm onSubmit={onSubmit}>
+      {/* display the dynamic title for this form (add or edit) */}
+      <StyledHeading>{title}</StyledHeading>
       <StyledLabel htmlFor="name">
         Name:
         <input type="text" id="name" name="name" />
